@@ -112,4 +112,44 @@ footer {
     padding: 20px;
   }
 
+@media (max-width: 991px) {
+    header {
+        padding: 30px;
+        font-size: 1.5rem; /* Mengurangi ukuran font header */
+    }
+
+    nav a {
+        padding: 15px; /* Mengurangi padding pada tautan navigasi */
+        font-size: 2rem; /* Mengurangi ukuran font tautan navigasi */
+    }
+
+    section {
+        margin: 30px; /* Mengurangi margin section */
+        padding: 20px; /* Mengurangi padding section */
+        font-size: 1.5rem; /* Mengurangi ukuran font di dalam section */
+    }
+
+    h2 {
+        font-size: 2rem; /* Mengurangi ukuran font untuk h2 */
+        padding: 15px; /* Mengurangi padding h2 */
+    }
+
+    p {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk paragraf */
+    }
+
+    .button-link {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk tombol */
+        padding: 8px 16px; /* Mengurangi padding tombol */
+    }
+
+    #splash-screen {
+        font-size: 24px; /* Mengurangi ukuran font splash screen */
+    }
+
+    #main-content {
+        padding: 10px; /* Mengurangi padding pada konten utama */
+    }
+}
+
 
