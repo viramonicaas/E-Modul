@@ -13,7 +13,7 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 80%;
     overflow-x: hidden;
 }
 
@@ -43,15 +43,15 @@ nav a {
     text-decoration: none;
     color: var(--second-bg-color);
     background-color: var(--text-color);
-    border-radius: 0.625rem; /* 10px */
-    font-size: 1.875rem; /* 3rem */
+    border-radius: 1rem; /* 10px */
+    font-size: 4rem; /* 3rem */
     border: 0.125rem solid var(--text-color); /* 2px */
     letter-spacing: 0.1rem;
     transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
-    transform: scale(2) translateY(-0.125rem); /* -2px */
+    transform: scale() translateY(-0.125rem); /* -2px */
     background-color: var(--main-color);
     color: var(--text-color);
     box-shadow: 0 0 20px var(--main-color);
@@ -63,7 +63,7 @@ section {
     padding: 1.875rem; /* 30px */
     background-color: var(--main-color);
     border-radius: 1.25rem; /* 20px */
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* 10px */
     font-size: 1.2rem;
     gap: 1.5rem;
 }
@@ -73,17 +73,20 @@ section.active {
 }
 
 h2 {
-    font-size: 2.5rem;
-    padding: 1.25rem; /* 20px */
+    font-size: 3rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.875rem; /* 2rem */
+    font-size: 2.5rem; 
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 1.875rem; /* 30px */
+    padding: 1rem; /* 30px */
     background-color: var(--second-bg-color);
     color: var(--text-color);
     margin-top: 1.25rem; /* 20px */
@@ -97,7 +100,7 @@ footer {
     text-decoration: none;
     border-radius: 0.625rem; /* 10px */
     margin: 0.9375rem 0; /* 15px */
-    font-size: 1.8rem;
+    font-size: 2rem; /* 1.8rem */
     transition: 0.3s ease-in-out;
 }
 
@@ -114,7 +117,7 @@ footer {
     align-items: center;
     position: fixed;
     top: 0;
-    left:  0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--text-color);
@@ -126,122 +129,45 @@ footer {
 #main-content {
     display: none;
     padding: 1.25rem; /* 20px */
-}
+} 
 
-@media(max-width: 1285px) {
-    html {
-        font-size: 55%;
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 0.9rem; /* Kurangi ukuran font untuk layar kecil */
     }
-
-    .services-container {
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 5rem;
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* Biarkan elemen nav berbaris jika tidak muat */
+        justify-content: center;
+        gap: 0.5rem;
+        max-width: 100%; /* Pastikan sesuai layar kecil */
+        padding: 15px;
     }
-}
-
-@media(max-width: 991px) {
-    header {
-        padding: 2rem 3%;
+    nav a {
+        font-size: 2rem; /* Sesuaikan ukuran font untuk tombol navigasi */
+        padding: 15px;
+        border-radius: 10px;
     }
-
     section {
-        padding: 2.5rem 3%; /* 10rem 3% 2rem */
+        max-width: 90%; /* Sesuaikan dengan layar kecil */
+        margin: auto;
+        padding: 1rem; /* Kurangi padding untuk layar kecil */
     }
-
-    .timeline-items::before {
-        left: 0.4375rem; /* 7px */
+    h2 {
+        font-size: 1.5rem; /* Ukuran lebih kecil untuk layar kecil */
     }
-
-    .timeline-time:nth-child(odd) {
-        padding-right: 0;
-        text-align: left;
+    p {
+        font-size: 1rem; /* Ukuran paragraf lebih kecil */
     }
-
-    .timeline-time:nth-child(odd),
-    .timeline-time:nth-child(even) {
-        padding-left: 2.3125rem; /* 37px */
+    .button-link {
+        font-size: 0.875rem; /* Sesuaikan ukuran font tombol */
+        padding: 0.5rem 1rem; /* Kurangi padding tombol */
     }
-
-    .timeline-dot {
-        left: 0;
+    #splash-screen {
+        font-size: 100%;
     }
-
-    .services {
-        padding-bottom: 7rem;
-    }
-
-    .testimonials .wrapper {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .contact form {
-        flex-direction: column;
-    }
-
-    .footer {
-        padding: 2rem 3%;
+    h1{
+        font-size: 100%;
     }
 }
 
-@media(max-width: 895px) {
-    #menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: black;
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
-        border-left: 0.125rem solid var(--main-color); /* 2px */
-        border-bottom: 0.125rem solid var(--main-color); /* 2px */
-        display: none;
-    }
-
-    .navbar.active {
-        display: block;
-    }
-
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: rgb(232, 232, 183);
-    }
-
-    .home {
-        flex-direction: column-reverse;
-        margin: 5rem 4rem;
-    }
-
-    .home-content h3 {
-        font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem; /* 8rem */
-        margin-top: 3rem;
-    }
-
-    .home-content p {
-        max-width: 37.5rem; /* 600px */
-        margin: 0 auto;
-    }
-
-    .home.img img {
-        width: 56vw;
-    }
-
-    .services h2 {
-        margin-bottom: 3rem;
-    }
-
-    .services-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
